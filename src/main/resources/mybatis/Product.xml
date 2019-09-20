@@ -18,4 +18,5 @@
 	<update id="updateProduct" parameterType="java.util.Map">
 		update product set product_status=#{target} where product_id=#{product_id}
 	</update>
+	
 </mapper>
