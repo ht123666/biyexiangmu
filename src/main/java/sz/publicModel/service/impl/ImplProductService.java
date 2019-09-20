@@ -30,6 +30,8 @@ public class ImplProductService implements IProductService{
 		return productDao.showAll();
 	}
 	
+	
+	
 	@Override
 	public Product findProductById(Integer id) {
 		return productDao.findProductById(id);

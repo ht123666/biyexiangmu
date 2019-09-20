@@ -19,6 +19,8 @@ public interface IProductService {
 		//根据id查保险详细信息
 		public Product findProductById(Integer id);
 		
+		
+		
 		//根据id进行产品的下线或上线
 		public Integer updateProduct(Map map);
 }

@@ -13,7 +13,7 @@ public interface ProductDAO {
 	//添加新的保险产品
 	public Integer addProduct(Product product);
 	
-	//查看所有保险产品
+	//查看所有保险产品...
 	public List<Product> showAll();
 	
 	//根据id查保险详细信息
