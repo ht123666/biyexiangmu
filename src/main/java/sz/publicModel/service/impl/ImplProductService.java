@@ -1,5 +1,8 @@
 package sz.publicModel.service.impl;
 
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,5 +25,19 @@ public class ImplProductService implements IProductService{
 		return productDao.addProduct(product);
 	}
 
+	@Override
+	public List<Product> showAll() {
+		return productDao.showAll();
+	}
 	
+	@Override
+	public Product findProductById(Integer id) {
+		return productDao.findProductById(id);
+	}
+	
+	
+	@Override
+	public Integer updateProduct(Map map) {
+		return productDao.updateProduct(map);
+	}
 }

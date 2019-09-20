@@ -1,5 +1,8 @@
 package sz.publicModel.service;
 
+import java.util.List;
+import java.util.Map;
+
 import sz.publicModel.vo.Product;
 
 public interface IProductService {
@@ -9,4 +12,13 @@ public interface IProductService {
 		
 		//添加新的保险产品
 		public Integer addProduct(Product product);
+		
+		//查看所有保险产品
+		public List<Product> showAll();
+		
+		//根据id查保险详细信息
+		public Product findProductById(Integer id);
+		
+		//根据id进行产品的下线或上线
+		public Integer updateProduct(Map map);
 }

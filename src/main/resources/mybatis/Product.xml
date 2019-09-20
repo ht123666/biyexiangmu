@@ -5,4 +5,17 @@
 		insert into product values(s_pro.nextval,#{product_name},#{people},#{product_time},
 		#{product_area},'电子保单',#{product_detail},#{product_summary},'1',#{head_pic},#{money_factory},#{age_factory})
 	</insert>
+	
+	<select id="showAll"  resultType="sz.publicModel.vo.Product">
+		select product_id,product_name,product_summary,product_status from product
+	</select>
+	
+	<select id="findProductById" parameterType="java.lang.Integer" resultType="sz.publicModel.vo.Product" >
+		select product_id, product_name, people, product_time, product_area, product_type, product_detail, product_summary,
+		 product_status, head_pic, money_factory, age_factory from product where product_id=#{product_id}
+	</select>
+	
+	<update id="updateProduct" parameterType="java.util.Map">
+		update product set product_status=#{target} where product_id=#{product_id}
+	</update>
 </mapper>
