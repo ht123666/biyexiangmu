@@ -170,7 +170,7 @@
 							</dd>
 						</dl>
 						<div class="submit_box">
-						<form method="post" id="form1" name="form1" action="/form">
+						<form method="post" id="form1" name="form1" action="/form" >
 							<input type="hidden" name="product_id" id="product_id" value="${product.product_id }">
 							<input type="hidden" name="product_name" value="hello">
 							 
@@ -579,9 +579,13 @@
 			$("#endDate").val(endDate);
 			
 			//获取年龄
-			//var age = $("#hidden_age").val();
+			var age = $("#hidden_age").val();
+			if(age<=${age2} && age>=${age1}) {
+				$("form[name='form1']").submit();
+			}else {
+				alert("error");
+			}
 			
-			$("form[name='form1']").submit();
 		}
 
 		//根据公式计算保费
