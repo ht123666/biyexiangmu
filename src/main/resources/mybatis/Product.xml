@@ -7,7 +7,7 @@
 	</insert>
 	
 	<select id="showAll"  resultType="sz.publicModel.vo.Product">
-		select product_id,product_name,product_summary,product_status from product
+		select product_id,product_name,product_summary,product_status,head_pic,people,product_area from product
 	</select>
 	
 	<select id="findProductById" parameterType="java.lang.Integer" resultType="sz.publicModel.vo.Product" >

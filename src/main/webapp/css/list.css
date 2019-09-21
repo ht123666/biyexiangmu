@@ -134,7 +134,7 @@
     display: none;
 }
 
-/*固定分类*/
+/*鍥哄畾鍒嗙被*/
 #listBannerBox .list_banner_hover {
     position: fixed;
     top: 0;
@@ -217,7 +217,7 @@
     filter: alpha(opacity=100);
 }
 
-/*健康险*/
+/*鍋ュ悍闄�*/
 .list_title {
     height: 60px;
     line-height: 60px;
@@ -254,12 +254,13 @@
 }
 
 .list_con .list_w {
-    width: 660px;
+    width: 550px;
 }
 
 .list_con .list_s {
-    width: 460px;
+    width: 550px;
 }
+
 
 .list_con .list .custom, .list_con .list h2 {
     position: relative;
@@ -415,9 +416,9 @@
     box-shadow: 0 0 4px #ff9600;
 }
 
-.list_con .list01 {
+/* .list_con .list01 {
     background-image: url("../images/list_imgs/list01.jpg");
-}
+} */
 
 .list_con .list02 {
     background-image: url("../images/list_imgs/list02.jpg");
