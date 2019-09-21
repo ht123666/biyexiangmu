@@ -5,6 +5,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
@@ -49,8 +52,34 @@ public class ProductController {
 		}
 		Integer res = productService.addProduct(product);
 		String str = res>0?"添加成功":"添加失败";
-		request.setAttribute("add_res", str);
+		request.setAttribute("res", str);
 		return "page/add/NewFile";
 	}
 	
+	@RequestMapping("show")
+	public String showProduct(HttpServletRequest request) {
+		List<Product> productList = productService.showAll();
+		request.setAttribute("productList", productList);
+		return "page/add/show";
+	}
+	
+	@RequestMapping("update")
+	public String updateProduct(Integer id,HttpServletRequest request) {
+		Product product = productService.findProductById(id);
+		request.setAttribute("product", product);
+		return "page/add/update";
+	}
+	
+	
+	@RequestMapping("update2")
+	public String updateProduct2(Integer product_id,Integer product_status,HttpServletRequest request) {
+		String targer = product_status==1?"0":"1";
+		Map map =  new HashMap();
+		map.put("product_id", product_id);
+		map.put("target", targer);
+		Integer res = productService.updateProduct(map);
+		String str = res>0?"操作成功":"操作失败";
+		request.setAttribute("res", str);
+		return "page/add/NewFile";
+	}
 }
