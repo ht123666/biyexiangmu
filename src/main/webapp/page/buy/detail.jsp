@@ -173,7 +173,7 @@
 						<form method="post" id="form1" name="form1" action="/form">
 							<input type="hidden" name="product_id" id="product_id" value="${product.product_id }">
 							<input type="hidden" name="product_name" value="hello">
-							
+							 
 							<input type="hidden" id="hidden_startDate" name="startDate" value="2019-10-01">
 							<input type="hidden" id="hidden_endDate" name="endDate" value="2020-10-1">
 							
