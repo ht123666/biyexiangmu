@@ -117,7 +117,7 @@
 							<dt>出生日期：</dt>
 							<dd>
 								<input id="birthDate"> <br> <span id="age">您的年龄是:1岁</span>
-								<input type="hidden" id="hidden_age">
+								
 								
 							</dd>
 						</dl>
@@ -182,7 +182,7 @@
 							<input type="hidden" name="money_get" id="money_get" value="">
 							<input type="hidden" name="money_text" id="money_text" value="">
 							  
-						
+							<input type="hidden" id="hidden_age" name="hidden_age" value="1">
 						</form>
 						
 							<a href="javascript:submit()" class="submit_buy">立即购买</a>已售<em>8182</em>份
@@ -578,6 +578,9 @@
 			var endDate = $("#hidden_endDate").val();
 			$("#endDate").val(endDate);
 			
+			//获取年龄
+			//var age = $("#hidden_age").val();
+			
 			$("form[name='form1']").submit();
 		}
 
@@ -672,7 +675,7 @@
 			laydate.render({
 				elem : '#startDate1',
 				min : 7,
-				value: '2019-10-01',
+				value: '${date}',
 				done : function(value, date, endDate) {
 					$.ajax({
 						url : "/countDate",
