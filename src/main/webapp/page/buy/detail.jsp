@@ -181,7 +181,7 @@
 							<input type="hidden" name="money_in" id="money_in" value="">
 							<input type="hidden" name="money_get" id="money_get" value="">
 							<input type="hidden" name="money_text" id="money_text" value="">
-							 
+							  
 						
 						</form>
 						
